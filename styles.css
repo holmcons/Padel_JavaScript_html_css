@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;    
+}
+
+li, a, button {
+    
+    font-weight: 600;
+    font-size: 16px;
+    color:rgb(242, 255, 4);
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color:  rgb(65, 64, 64);
+}
+
+img{
+    display: inline;
+    border: 2px solid black;
+    background-color: rgb(155, 0, 169, 1);
+    padding: 0.2%;
+    
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(65, 64, 64);
+    z-index: -2;
+}
+
+.form{
+    position: absolute;
+    border: 7px solid gray;
+    border-style: groove;
+    display: flex;
+    flex-direction: column;
+    color: rgb(242, 255, 4);    
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 1.5%;
+    margin-bottom: 90px;
+}
+
+.form input{
+    background-color: transparent;
+    color: rgb(242, 255, 4);
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+:-moz-placeholder {
+    text-align: center;
+  }
+
+.logo {
+    cursor: pointer;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.nav li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav li a:hover {
+    color:rgb(155, 0, 169, 0.8)
+}
+
+.content{
+    text-align: center;
+}
+
+.content h2{
+    font-size: 140px;
+    font-weight: 600;
+    color: rgb(242, 255, 4);
+    transition: 0.5s;
+    margin-bottom: 200px;
+}
+
+.content h2:hover{
+    -webkit-text-stroke: 2px rgb(129, 131, 63);
+    color: transparent;
+}
+
+.first-backvideo{
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%) blur(1px);
+    /* display: flex;
+    align-items: center; 
+    top: 0;
+    left: 0;    
+    object-fit: cover;
+    opacity: 1; */
+}
+
+@media (min-aspect-ratio: 16/9){
+    .first-backvideo{
+        width: 27.5%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .first-backvideo{
+        width: auto;
+        height: 100vh;
+    }
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(155, 0, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgba(155, 0, 169, 0.8);
+}
