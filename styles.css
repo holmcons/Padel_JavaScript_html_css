@@ -13,6 +13,7 @@ li, a, button {
     font-size: 16px;
     color:rgb(242, 255, 4);
     text-decoration: none;
+    letter-spacing: 1px;
 }
 
 header {
@@ -54,6 +55,7 @@ img{
     text-align: center;
     font-weight: 600;
     font-size: 16px;
+    letter-spacing: 1px;
     padding: 1.5%;
     margin-bottom: 90px;
 }
@@ -61,6 +63,7 @@ img{
 .form input{
     background-color: transparent;
     color: rgb(242, 255, 4);
+    margin-bottom: 10px;
 }
 
 ::-webkit-input-placeholder {
@@ -77,6 +80,7 @@ img{
 
 .nav {
     list-style: none;
+    text-align: center;
 }
 
 .nav li {
@@ -94,11 +98,12 @@ img{
 }
 
 .content{
+    
     text-align: center;
 }
 
 .content h2{
-    font-size: 140px;
+    font-size: 130px; 
     font-weight: 600;
     color: rgb(242, 255, 4);
     transition: 0.5s;
@@ -112,6 +117,7 @@ img{
 
 .first-backvideo{
     position: absolute;
+    width: 31.9%;
     z-index: -1;
     filter: brightness(70%) blur(1px);
     /* display: flex;
@@ -122,7 +128,19 @@ img{
     opacity: 1; */
 }
 
-@media (min-aspect-ratio: 16/9){
+button{
+    padding: 9px 25px;
+    background-color: rgb(155, 0, 169, 1);
+    border: 2px solid black;;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgba(155, 0, 169, 0.8);
+}
+
+/* @media (min-aspect-ratio: 16/9){
     .first-backvideo{
         width: 27.5%;
         height: auto;
@@ -134,16 +152,64 @@ img{
         width: auto;
         height: 100vh;
     }
+} */
+@media screen and (max-width: 768px) {
+
+    header{
+        flex-direction: column;
+    }
+    .nav {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .content h2{
+        font-size: 80px;
+    }
+    .first-backvideo{
+        width: 65%;
+    }
 }
 
-button{
-    padding: 9px 25px;
-    background-color: rgb(155, 0, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-button:hover {
-    background-color: rgba(155, 0, 169, 0.8);
+@media screen and (max-width: 480px) {
+
+    .burger-nav{
+        display: block;
+        height: 40px;
+        margin-top: 15px;
+        /* width: 100%; */
+        background: url(images/burgernav.webp) no-repeat center/40px 40px;
+        cursor: pointer;
+    }
+   
+    .nav{
+        overflow: hidden;
+        /* text-align: left; */
+        background-color: rgb(73, 73, 73);
+        height: 0;
+    }
+
+    .nav.open{
+        height: auto;
+    }
+
+    .nav li{
+          display: block;
+          margin: 0;
+          padding: 0;      
+    }
+
+    .nav li a{
+        padding: 10px;
+        border-bottom: 2px solid rgb(155, 0, 169, 1);
+        display: block;
+        margin: 0;
+    }
+
+    .content h2{
+        font-size: 40px;
+        margin-top: -200px;
+    }
+    .first-backvideo{
+        width: 90%;
+    }
 }

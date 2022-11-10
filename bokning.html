@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
-        <script>
+        <!-- <script>
             function validbooking() {
                 let namn = document.forms["bookning"]["Namn"].value;
                 if ( namn == "namn" ) {
@@ -22,8 +22,8 @@
                     return false;
                     }
                 } 
-            
-        </script>
+        </script> -->
+
     </head>
     <body>
         <header>
@@ -31,6 +31,7 @@
             <img src="images/logo.png" class="logo"  alt="logo" height="50" width="50">
             </a>
             <nav>
+                <a class="burger-nav"></a>
                 <ul class="nav">
                     <li><a href="bokning.html">Bokning</a></li>
                     <li><a href="banor.html">Banor</a></li>
@@ -50,16 +51,21 @@
                 <br>
                 <label for="medlemsid">Medlemsnummer/medlemsid</label>
                 <input type="text" name="MedId" placeholder="000001">
-                <br><br>
+                <br>
+                <label for="date">Datum och tid</label>
+                <input type="datetime-local" name="Datum" placeholder="Datum">
+                <br>
                 <label for="bana1">Bana1</label>
                 <input type="radio" name="bana" value="bana1">
                 <label for="bana2">Bana2</label>
                 <input type="radio" name="bana" value="bana2">
                 <br>
-                <br>
                 <button type="submit" name="submit">Boka</button>
             </form>
         </div>
         
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="menu.js"></script>
+
     </body>
 </html>
