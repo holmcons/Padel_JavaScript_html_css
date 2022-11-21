@@ -47,8 +47,8 @@ img{
 
 .form{
     position: absolute;
-    border: 7px solid gray;
-    border-style: groove;
+    /* border: 7px solid gray;
+    border-style: groove; */
     display: flex;
     flex-direction: column;
     color: rgb(242, 255, 4);    
@@ -58,12 +58,69 @@ img{
     letter-spacing: 1px;
     padding: 1.5%;
     margin-bottom: 90px;
+    width: 40%;
 }
 
 .form input{
     background-color: transparent;
     color: rgb(242, 255, 4);
     margin-bottom: 10px;
+}
+.container .time{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+.booktime{
+    position: relative;
+    margin: 10px;
+}
+.booktime .cost{
+    visibility: hidden;
+    width: 50px;
+    background-color: rgb(65, 64, 64);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 5px;
+    position:absolute;
+    top: 18px;
+    left: -2px;
+}
+.booktime:hover .cost{
+    visibility: visible;
+}
+.booktime:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.5);
+}
+.showbooking {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+      
+}
+.showtime{
+    margin-left: 30px;
+    margin-right: 5px;
+}
+.selected{
+    margin-left: 30px;
+    margin-right: 5px;
+    color: rgb(155, 0, 169, 0.8)
+}
+.occupied{
+    margin-left: 30px;
+    margin-right: 5px;
+    color: red;
+}
+p.text span{
+    color: black;
 }
 
 ::-webkit-input-placeholder {
@@ -120,12 +177,6 @@ img{
     width: 31.9%;
     z-index: -1;
     filter: brightness(70%) blur(1px);
-    /* display: flex;
-    align-items: center; 
-    top: 0;
-    left: 0;    
-    object-fit: cover;
-    opacity: 1; */
 }
 
 button{
@@ -140,19 +191,8 @@ button:hover {
     background-color: rgba(155, 0, 169, 0.8);
 }
 
-/* @media (min-aspect-ratio: 16/9){
-    .first-backvideo{
-        width: 27.5%;
-        height: auto;
-    }
-}
+/* media querys for responsibility */
 
-@media (max-aspect-ratio: 16/9){
-    .first-backvideo{
-        width: auto;
-        height: 100vh;
-    }
-} */
 @media screen and (max-width: 768px) {
 
     header{
@@ -213,3 +253,4 @@ button:hover {
         width: 90%;
     }
 }
+/* end media querys for responsibility */
