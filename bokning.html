@@ -8,21 +8,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
-        <!-- <script>
-            function validbooking() {
-                let namn = document.forms["bookning"]["Namn"].value;
-                if ( namn == "namn" ) {
-                    alert("Var vänlig fyll i ditt namn.");
-                    return false;
-                    }
-        
-                let medlem = document.forms["bookning"]["MedlId"].value;
-                if ( medlem == "id" ) {
-                    alert("Du behöver vara medlem för att boka.");
-                    return false;
-                    }
-                } 
-        </script> -->
+
+        <script defer src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script defer src="menu.js"></script>
+        <script defer src="picktime.js"></script>
+        <script defer src="validation.js"></script>
     </head>
     <body>
         <header>
@@ -44,16 +34,22 @@
             <video autoplay loop muted plays-inline class="first-backvideo">
                 <source src="images/video1.mp4" type="video/mp4">
             </video>
-            <form class="form" name="booking" onsubmit="return validbooking()" action="#" method="#">
+            <form class="form" name="booking" id="form" action="#" method="#">
+                <div class="input-control">
                 <label for="namn">Namn</label>
-                <input type="text" name="Namn" placeholder="Johan Holm">
-                <br>
-                <label for="medlemsid">Medlemsnummer/medlemsid</label>
-                <input type="text" name="MedId" placeholder="000001">
-                <br>
+                <input type="text" name="namn" id="namn" placeholder="Johan Holm">
+                <div class="error"></div>
+                </div>                
+                <div class="input-control">
+                <label for="medlemsid">Medlemsnummer</label>
+                <input type="text" name="medid" id="medid" placeholder="000001">
+                <div class="error"></div>
+                </div>                
+                <div class="input-control">
                 <label for="date">Datum</label>
-                <input type="date" name="Datum" placeholder="Datum">
-                <br>
+                <input type="date" name="datum" id="datum" placeholder="Datum">
+                <div class="error"></div>
+                </div>                
                 <label for="bana1">Bana1</label>
                 <input type="radio" name="bana" value="bana1">
                 <label for="bana2">Bana2</label>
@@ -67,7 +63,7 @@
                 </div>
                 
                 <div class="container">
-                    <div class="time" value="20">
+                    <div class="time" data-value="20">
                         <div class="booktime occupied">06:00<span class="cost">20$</span></div>
                         <div class="booktime">07:30<span class="cost">20$</span></div>
                         <div class="booktime">09:00<span class="cost">20$</span></div>
@@ -90,9 +86,5 @@
                 <button type="submit" name="submit">Boka</button>
             </form>
         </div>
-        
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="menu.js"></script>
-
     </body>
 </html>

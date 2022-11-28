@@ -45,10 +45,8 @@ img{
     z-index: -2;
 }
 
-.form{
+.form {
     position: absolute;
-    /* border: 7px solid gray;
-    border-style: groove; */
     display: flex;
     flex-direction: column;
     color: rgb(242, 255, 4);    
@@ -60,11 +58,33 @@ img{
     margin-bottom: 90px;
     width: 40%;
 }
-
-.form input{
+.input-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input-control input {
+    display: block;
+    border: 2px solid transparent;
+    border-radius: 4px;
     background-color: transparent;
     color: rgb(242, 255, 4);
-    margin-bottom: 10px;
+    margin-bottom: 1px;
+    font-size: 14px;
+}
+.input-control input:focus{
+    outline: 0;
+}
+.input-control.success input {
+    border-color: greenyellow;
+}
+.input-control.error input {
+    border-color: red;
+}
+.input-control .error {
+    color: red;
+    font-size: 11px;
+    height: 13px;
 }
 .container .time{
     display: flex;
