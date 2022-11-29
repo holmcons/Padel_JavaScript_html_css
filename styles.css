@@ -33,7 +33,7 @@ img{
 
 .hero{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     position: absolute;
     padding: 0 5%;
     display: flex;
@@ -53,7 +53,7 @@ img{
     font-size: 16px;
     letter-spacing: 1px;
     padding: 1.5%;
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
     width: 40%;
 }
 .input-control {
@@ -249,14 +249,13 @@ button:hover {
         display: block;
         height: 40px;
         margin-top: 15px;
-        /* width: 100%; */
         background: url(images/burgernav.webp) no-repeat center/40px 40px;
         cursor: pointer;
     }
    
     .nav{
         overflow: hidden;
-        /* text-align: left; */
+        text-align: left;
         background-color: rgb(73, 73, 73);
         height: 0;
     }
@@ -284,6 +283,37 @@ button:hover {
     }
     .first-backvideo{
         width: 90%;
+    }
+    .form{
+        margin-top: 85px;
+    }
+    .showbooking{
+        flex-direction: column;
+    }
+    .showbooking .showtime{
+        margin-right: 0px;
+        margin-bottom: -4px;
+    }
+    .showbooking .selected{
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 5px;
+        margin-bottom: -4px;
+    }
+    .showbooking .occupied{
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 5px;
+        margin-bottom: -4px;
+    }
+    .time{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .row{
+        flex-direction: column;
     }
 }
 /* end media querys for responsibility */
