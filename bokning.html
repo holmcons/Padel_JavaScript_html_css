@@ -49,12 +49,14 @@
                 <label for="date">Datum</label>
                 <input type="date" name="datum" id="datum" placeholder="Datum">
                 <div class="error"></div>
-                </div>                
+                </div>
+                <div class="input-control">               
                 <label for="bana1">Bana1</label>
-                <input type="radio" name="bana" value="bana1">
+                <input type="radio" name="bana" id="bana" value="bana1" required>
                 <label for="bana2">Bana2</label>
-                <input type="radio" name="bana" value="bana2">
-                <br>
+                <input type="radio" name="bana" id="bana" value="bana2" required>
+                <div class="error"></div>
+                </div>
                 
                 <div class="showbooking">
                     <div class="showtime">00:00</div><small>Bokningsbar</small>
@@ -63,24 +65,28 @@
                 </div>
                 
                 <div class="container">
-                    <div class="time" data-value="20">
-                        <div class="booktime occupied">06:00<span class="cost">20$</span></div>
-                        <div class="booktime">07:30<span class="cost">20$</span></div>
-                        <div class="booktime">09:00<span class="cost">20$</span></div>
-                        <div class="booktime">10:30<span class="cost">20$</span></div>
-                        <div class="booktime occupied">12:00<span class="cost">20$</span></div>
-                        <div class="booktime">13:30<span class="cost">20$</span></div>
-                        <div class="booktime">15:00<span class="cost">20$</span></div>
-                        <div class="booktime">16:30<span class="cost">20$</span></div>
-                        <div class="booktime occupied">18:00<span class="cost">20$</span></div>
-                        <div class="booktime occupied">19:30<span class="cost">20$</span></div>
-                        <div class="booktime">21:00<span class="cost">20$</span></div>
-                        <div class="booktime">22:30<span class="cost">20$</span></div>
+                    <div class="time">
+                        <div class="row" id="row1">
+                            <div class="booktime occupied">06:00<span class="cost">200:-</span></div>
+                            <div class="booktime">07:30<span class="cost">200:-</span></div>
+                            <div class="booktime">09:00<span class="cost">200:-</span></div>
+                            <div class="booktime">10:30<span class="cost">200:-</span></div>
+                            <div class="booktime occupied">12:00<span class="cost">200:-</span></div>
+                            <div class="booktime">13:30<span class="cost">200:-</span></div>
+                        </div>
+                        <div class="row" id="row2">
+                            <div class="booktime">15:00<span class="cost">200:-</span></div>
+                            <div class="booktime">16:30<span class="cost">200:-</span></div>
+                            <div class="booktime occupied">18:00<span class="cost">200:-</span></div>
+                            <div class="booktime occupied">19:30<span class="cost">200:-</span></div>
+                            <div class="booktime">21:00<span class="cost">200:-</span></div>
+                            <div class="booktime">22:30<span class="cost">200:-</span></div>
+                        </div>
                     </div>
                 </div>
                 <br>
                 <p class="text">
-                    Du har valt att boka <span id="count">0</span> bana/or till priset av $<span id="total">0</span>.
+                    Du har valt att boka <span id="count">0</span> bana/or till priset av <span id="total">0</span> kr.
                 </p>
                 <br>
                 <button type="submit" name="submit">Boka</button>

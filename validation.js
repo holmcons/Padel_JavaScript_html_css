@@ -1,7 +1,10 @@
+
+
 const form = document.getElementById('form');
 const name = document.getElementById('namn');
 const medId = document.getElementById('medid');
 const date = document.getElementById('datum');
+const track = document.querySelector('bana');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -17,7 +20,6 @@ const setError = (element, message) =>{
     inputControl.classList.add('error');
     inputControl.classList.remove('success');
 };
-
 //If nameValue input success
 const setSuccess = element => {
     const inputControl = element.parentElement;
@@ -68,6 +70,7 @@ const validateInputs = () => {
     const nameValue = name.value.trim();
     const medidValue = medId.value.trim();
     const dateValue = date.value.trim();
+    
 
     if (nameValue === '') {
         setError(name, 'Fyll i ditt fullständiga för- och efternamn');
@@ -77,7 +80,7 @@ const validateInputs = () => {
     if(medidValue === ''){
         setError2(medId, 'Fyll i ditt medlemsnummer');
     } else
-        setSuccess2(medId)
+        setSuccess2(medId);
 
     if (dateValue == ''){
         setError3(date, 'Fyll i datum');

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -65,7 +63,6 @@ img{
 }
 .input-control input {
     display: block;
-    border: 2px solid transparent;
     border-radius: 4px;
     background-color: transparent;
     color: rgb(242, 255, 4);
@@ -86,13 +83,12 @@ img{
     font-size: 11px;
     height: 13px;
 }
-.container .time{
+.row{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
-
+    margin-bottom: -10px;
 }
 .booktime{
     position: relative;
@@ -106,11 +102,26 @@ img{
     text-align: center;
     border-radius: 6px;
     padding: 2px 5px;
-    position:absolute;
-    top: 18px;
-    left: -2px;
+    position: absolute;
+    top:20px;
+    left: -2.5px;
+}
+#row1 .booktime .cost{
+    visibility: hidden;
+    width: 50px;
+    background-color: rgb(65, 64, 64);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 5px;
+    position: absolute;
+    top:-25px;
+    left: -2.5px;
 }
 .booktime:hover .cost{
+    visibility: visible;
+}
+#row1 .booktime:hover .cost{
     visibility: visible;
 }
 .booktime:not(.occupied):hover{
@@ -122,21 +133,23 @@ img{
     flex-direction: row;  
     align-items: center;
     justify-content: center;
-    margin: 10px;
-      
+    margin: 20px;
 }
-.showtime{
-    margin-left: 30px;
+.showbooking .showtime{
     margin-right: 5px;
+}
+.showbooking .selected{
+    margin-right: 5px;
+    margin-left: 30px;
+}
+.showbooking .occupied{
+    margin-right: 5px;
+    margin-left: 30px;
 }
 .selected{
-    margin-left: 30px;
-    margin-right: 5px;
     color: rgb(155, 0, 169, 0.8)
 }
 .occupied{
-    margin-left: 30px;
-    margin-right: 5px;
     color: red;
 }
 p.text span{
