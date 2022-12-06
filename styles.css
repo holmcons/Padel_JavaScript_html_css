@@ -34,7 +34,7 @@ img{
 .hero{
     width: 100%;
     height: 120vh;
-    position: absolute;
+    position: relative;
     padding: 0 5%;
     display: flex;
     align-items: center;
@@ -228,6 +228,25 @@ button:hover {
     background-color: rgba(155, 0, 169, 0.8);
 }
 
+footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color:  rgb(65, 64, 64);
+}
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    width: 23%;
+    float: left;
+    margin-right: 2%;
+}
+footer li{
+    margin: 10px 0;
+}
+
 /* media querys for responsibility */
 
 @media screen and (max-width: 768px) {
@@ -244,6 +263,16 @@ button:hover {
     }
     .first-backvideo{
         width: 65%;
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    footer ul{
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
     }
 }
 
